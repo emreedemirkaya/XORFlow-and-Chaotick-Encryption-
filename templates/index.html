@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaotik Akış Şifreleme</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kaotik Akış Şifreleme</h1>
+            <p></p>
+        </header>
+        
+        <main>
+            <div class="form-group">
+                <label for="text-input">Metin veya Şifreli Metin (Base64)</label>
+                <textarea id="text-input" class="rounded-lg" rows="6" placeholder="Şifrelemek veya çözmek istediğiniz metni buraya girin..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="key-input">Anahtar</label>
+                <input type="text" id="key-input" class="rounded-lg" placeholder="Kaotik sistemi başlatacak bir anahtar girin...">
+            </div>
+            
+            <div class="button-group">
+                <button id="encrypt-btn" class="rounded-lg">Şifrele</button>
+                <button id="decrypt-btn" class="rounded-lg">Şifre Çöz</button>
+            </div>
+            
+            <div class="result-container">
+                <h2>Sonuç</h2>
+                <div id="result-output" class="output-box rounded-lg">
+                    <span class="placeholder">Sonuç</span>
+                </div>
+                <button id="copy-btn" class="copy-btn rounded-lg" disabled>Kopyala</button>
+
+                <!-- Kaotik anahtar akışını göstermek için bölüm -->
+                <div id="keystream-container" class="keystream-info" style="display: none;">
+                    <h3>Üretilen Anahtar Akışı (İlk 16 Bayt - Hex)</h3>
+                    <div id="keystream-output" class="output-box rounded-lg keystream-box"></div>
+                </div>
+            </div>
+
+            <div id="error-message" class="error-box rounded-lg" style="display: none;"></div>
+        </main>
+        <footer>
+            <p>Emre Demirkaya</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
