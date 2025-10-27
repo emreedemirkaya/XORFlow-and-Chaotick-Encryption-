@@ -4,7 +4,7 @@
 
 
 
-Kaotik Akış Şifreleme Web Uygulaması (XORFlow)
+Kaotik Akış Şifreleme Web Uygulaması 
 
 Bu proje, metinleri Lojistik Harita (Logistic Map) tabanlı kaotik bir anahtar akışı kullanarak şifreleyen ve çözen basit bir web uygulamasıdır. Kullanıcı tarafından sağlanan bir anahtar, kaotik sistem için başlangıç parametrelerini (r ve x0) türetmek için kullanılır ve bu sistem, metni XORlamak için kullanılan tahmin edilemez bir anahtar akışı (keystream) üretir.
 
@@ -39,9 +39,9 @@ Kriptografi: hashlib (SHA-256), Lojistik Harita, XOR
 
 Şifrele butonuna tıklayın.
 
-"Sonuç" kutusunda Base64 formatında şifrelenmiş metni göreceksiniz (örn: aXq...==).
+"Sonuç" kutusunda Base64 formatında şifrelenmiş metni göreceksiniz (örn: mgCFeUS1Vs6OILYTg3I=).
 
-Ayrıca, "Üretilen Anahtar Akışı" kutusunda bu şifreleme için üretilen gizli anahtarın ilk 16 baytını göreceksiniz.
+Ayrıca, "Üretilen Anahtar Akışı" kutusunda bu şifreleme için üretilen gizli anahtarın ilk 16 baytını göreceksiniz.(örn: DF 6D F7 1C 64 F1 33 A3 E7 52 DD 72 FA 13)
 
 Şifre Çözme:
 
